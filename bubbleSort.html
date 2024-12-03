@@ -1,0 +1,41 @@
+<html>
+<head></head>
+<body>
+<script>
+var swap = function(index1, index2){
+  var aux = array[index1];
+  array[index1] = array[index2];
+  array[index2] = aux;
+}
+
+bubbleSort = function() {
+  for(let i = 0; i < array.length; i++) {
+    for(let j = 0; j < array.length-1-i; j++) {
+      if(array[j] > array[j+1]) {
+        swap(j, j+1)
+      }
+    }
+  }
+}
+
+
+function createNonSortedArray(size){ //{6}
+  var array = new Array();
+  for (var i = size; i> 0; i--){
+    array.push(i);
+  }
+  return array;
+}
+var array = createNonSortedArray(5);
+
+
+console.log(array)
+console.log("bubbleSort")
+bubbleSort(array)
+
+console.log(array)
+
+</script>
+</body>
+
+</html>
